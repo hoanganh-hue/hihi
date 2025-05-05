@@ -1,0 +1,88 @@
+@import './variables.css';
+@import './global.css';
+@import './layout.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Các style tùy chỉnh cho TikTok Shop UI */
+@layer components {
+  .tiktok-button {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500;
+  }
+
+  .tiktok-button-outline {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-red-500 text-base font-medium rounded-md text-red-500 bg-white hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500;
+  }
+  
+  .tiktok-button-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500;
+  }
+
+  .container {
+    @apply mx-auto px-4;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-pink-500 text-white hover:bg-pink-600;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-600 hover:border-pink-500 hover:text-pink-500;
+  }
+  
+  .card {
+    @apply bg-[#1a1a1a] rounded-xl overflow-hidden border border-[#333];
+  }
+  
+  .input {
+    @apply bg-[#222] border border-[#444] rounded-lg px-4 py-2 text-white focus:outline-none focus:border-pink-500;
+  }
+  
+  .badge {
+    @apply px-2 py-1 text-xs rounded-full;
+  }
+}
+
+/* Tùy chỉnh component */
+.product-card {
+  @apply bg-white rounded-md overflow-hidden shadow-sm transition-shadow hover:shadow-md;
+}
+
+.product-card-image {
+  @apply w-full h-48 object-cover;
+}
+
+.product-card-content {
+  @apply p-4;
+}
+
+.flash-sale-tag {
+  @apply absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded;
+}
+
+/* Animation */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-leave-to {
+  transform: translateX(-100%);
+}
